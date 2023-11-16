@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"; // Importing a Link component
+import { Button } from "react-bootstrap";
 
 // React components are modularized into smaller chunks of your app
 // Components can receive data. We can display additional components within other components
@@ -12,15 +13,27 @@ import { Link } from "react-router-dom"; // Importing a Link component
 // The return statement contains our navigation
 // Link component is used to create links to different routes
 // All components return JSX -> {}
-const Navigation = ({page}) => {
+const Navigation = ({ page }) => {
   return (
     <nav>
       {/*Using Link component with a `to` property  */}
       {/*  */}
-      <Link className={`${page==='/' && 'active'}`} to="/">Home</Link>|
-      <Link className={`${page==='/portfolio' && 'active'}`} to="/portfolio">Portfolio</Link>|
-      <Link className={`${page==='/contact' && 'active'}`} to="/contact">Contact</Link>|
-      <Link className={`${page==='/resume' && 'active'}`} to="/resume">Resume</Link>|
+      <Link className={`${page === "/" && "active"}`} to="/">
+        Home
+      </Link>
+      |
+      <Link className={`${page === "/portfolio" && "active"}`} to="/portfolio">
+        Portfolio
+      </Link>
+      |
+      <Link className={`${page === "/contact" && "active"}`} to="/contact">
+        Contact
+      </Link>
+      |
+      <Link className={`${page === "/resume" && "active"}`} to="/resume">
+        Resume
+      </Link>
+      |
     </nav>
   );
 };
