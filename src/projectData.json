@@ -1,9 +1,9 @@
 [
   {
-    "title": "blah",
-    "description": "blah blah",
-    "githubUrl": "",
-    "imageUrl": "",
+    "title": "React Portfolio",
+    "description": "Creating a dynamic portfolio using React.",
+    "githubUrl": "https://charmingdarling.github.io/reactportfolio/",
+    "imageUrl": "./public/reactthumbnail.png",
     "deployedUrl": ""
   }
 ]
