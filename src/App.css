@@ -8,12 +8,25 @@
 
 .active {
   color: #0677a1;
-  transform: scale(1.5);
+  transform: scale(1);
   font-weight: bolder;
+}
+
+.profile {
+  object-fit: scale-down;
+  height: 250px;
+  width: auto;
 }
 
 .container {
   background-blend-mode: multiply;
+  position: relative;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
