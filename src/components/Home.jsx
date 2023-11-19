@@ -1,7 +1,9 @@
 import { BiDownArrow } from "react-icons/bi";
-import { Link } from "react-router-dom"; // Importing a Link component; Link component is used to create links to different routes
+import { Link } from "react-router-dom";
 import { Parallax } from "react-parallax";
 import { IconContext } from "react-icons";
+import { Container, Row, Col } from "react-bootstrap";
+import content from "../contentData.json";
 
 const Home = () => {
   return (
@@ -19,7 +21,7 @@ const Home = () => {
           <h2 style={{ textAlign: "center" }}>Web Developer</h2>
           <h3 style={{ textAlign: "center", marginTop: "20%" }}>
             <a href="#main-content">
-              <BiDownArrow />
+              <BiDownArrow size={"2em"} />
             </a>
           </h3>
           <div style={{ height: "0vh" }} />
@@ -29,8 +31,30 @@ const Home = () => {
           <div style={{ height: "10vh" }} />
           <h2 style={{ textAlign: "center" }}>GET TO KNOW ME</h2>
         </div>
+        <Container className="container">
+          <Row>
+            <img
+              src="./kim.jpg"
+              className="profile"
+              alt="woman with glasses"
+            ></img>
+            <Col className="center">
+              <div>
+                <p></p>
+                {content.map((contentItem) => (
+                  <div key={contentItem.id} className="mx-4">
+                    <p>{contentItem.welcome}</p>
+                    <p></p>
+                    <p>{contentItem.hobbies}</p>
+                    <p>{contentItem.previousCareer}</p>
+                  </div>
+                ))}
+              </div>
+              {/* Additional content can be added here */}
+            </Col>
+          </Row>
+        </Container>
       </div>
-      {/* end container */}
     </>
   );
 };
