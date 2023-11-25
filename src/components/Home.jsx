@@ -1,8 +1,7 @@
 import { BiDownArrow } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { Parallax } from "react-parallax";
-import { IconContext } from "react-icons";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import content from "../contentData.json";
 
 const Home = () => {
@@ -33,11 +32,12 @@ const Home = () => {
         </div>
         <Container className="container">
           <Row>
-            <img
+            <Image
               src="./kim.jpg"
               className="profile"
-              alt="woman with glasses"
-            ></img>
+              alt="kim with glasses"
+              rounded
+            ></Image>
             <Col className="center">
               <div>
                 <p></p>
