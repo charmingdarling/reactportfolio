@@ -8,7 +8,7 @@ import content from "../contentData.json";
 const Home = () => {
   return (
     <>
-      <div className="container">
+      <div>
         <Parallax
           blur={0}
           bgImage="mountains.jpg"
