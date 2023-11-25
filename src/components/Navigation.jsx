@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"; // Importing a Link component
-import { Button, Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
 // React components are modularized into smaller chunks of your app
 // Components can receive data. We can display additional components within other components
@@ -22,23 +22,31 @@ const Navigation = () => {
     { page: "Resume", link: "/resume" },
   ];
   return (
-    <Navbar
-      style={{
-        position: "fixed",
-        zIndex: 10,
-        backgroundColor: "rgba(255,255,255,0.4)",
-      }}
-      sticky="top"
-      expand="lg"
-    >
-      <Nav className="me-auto" style={{ backgroundColor: "inherit" }}>
-        {links.map((pageLink) => (
-          <Nav.Link as={NavLink} to={pageLink.link} key={pageLink.page}>
-            {pageLink.page}
-          </Nav.Link>
-        ))}
-      </Nav>
-    </Navbar>
+    <Container>
+      <Navbar
+        style={{
+          position: "fixed",
+          zIndex: 10,
+          backgroundColor: "rgba(255,255,255,0.8)",
+          width: "100%",
+          height: 35,
+          left: 0,
+        }}
+        sticky="top"
+        expand="md"
+      >
+        <Nav className="me-auto" style={{ marginLeft: 5 }}>
+          Kim Nguyen
+        </Nav>
+        <Nav className="ms-auto" style={{}}>
+          {links.map((pageLink) => (
+            <Nav.Link as={NavLink} to={pageLink.link} key={pageLink.page}>
+              {pageLink.page}
+            </Nav.Link>
+          ))}
+        </Nav>
+      </Navbar>
+    </Container>
   );
 };
 
