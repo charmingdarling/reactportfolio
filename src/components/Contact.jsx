@@ -40,7 +40,7 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div className="center">
       <h1>Get in touch.</h1>
       <div>
         <input
@@ -50,15 +50,16 @@ const Contact = () => {
           value={formState.from_name}
           onChange={handleChange}
         />
+        <p></p>
         <textarea
           rows={4}
           name="message"
           value={formState.message}
           onChange={handleChange}
         />
-        <Button onClick={sendEmail}>Submit</Button>
-        <p>{displayMessage}</p>
       </div>
+      <Button onClick={sendEmail}>Submit</Button>
+      <p>{displayMessage}</p>
     </div>
   );
 };
