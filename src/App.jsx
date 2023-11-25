@@ -22,7 +22,7 @@ function App() {
   // Expressions in JSX should be placed in curly braces {}
 
   return (
-    <div>
+    <div style={{ margin: 0 }}>
       {/* Comments within the return statement must be wrapped in curly braces and syntactically resemble JS mult-line comments*/}
       {/* When rendering a React child component, JSX syntax resembles that of HTML rather than function expression such as `ReactList()` */}
       <Navigation page={currentPage} />
