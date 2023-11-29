@@ -27,7 +27,7 @@ const Home = () => {
         </Parallax>
 
         <div id="main-content">
-          <div style={{ height: "10vh" }} />
+          <div style={{ height: "5vh" }} />
           <h2 style={{ textAlign: "center" }}>GET TO KNOW ME</h2>
         </div>
         <Container className="container">
