@@ -35,7 +35,7 @@ const Navigation = () => {
         sticky="top"
         expand="md"
       >
-        <Nav className="me-auto" style={{ marginLeft: 5 }}>
+        <Nav className="me-auto" style={{ marginLeft: 10 }}>
           Kim Nguyen
         </Nav>
         <Nav className="ms-auto" style={{}}>
