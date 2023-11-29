@@ -4,6 +4,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import "./App.css";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <Navigation page={currentPage} />
       {/* Like main.handlebars body?*/}
       <Outlet />
+      <Footer />
     </div>
   );
 }
