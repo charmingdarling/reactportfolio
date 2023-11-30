@@ -1,5 +1,8 @@
+import React from "react";
 import { NavLink } from "react-router-dom"; // Importing a Link component
 import { Navbar, Nav, Container } from "react-bootstrap";
+
+import "./Navbar.css";
 
 // React components are modularized into smaller chunks of your app
 // Components can receive data. We can display additional components within other components
@@ -23,19 +26,11 @@ const Navigation = () => {
   ];
   return (
     <Container>
-      <Navbar
-        style={{
-          position: "fixed",
-          zIndex: 10,
-          backgroundColor: "rgba(255,255,255,0.8)",
-          width: "100%",
-          height: 35,
-          left: 0,
-        }}
-        sticky="top"
-        expand="md"
-      >
-        <Nav className="me-auto" style={{ marginLeft: 10 }}>
+      <Navbar className="navbar" sticky="top" expand="md">
+        <Nav
+          className="me-auto"
+          style={{ marginLeft: 0, fontSize: "xx-large" }}
+        >
           Kim Nguyen
         </Nav>
         <Nav className="ms-auto" style={{}}>
