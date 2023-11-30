@@ -14,16 +14,16 @@ const Home = () => {
           bgImageAlt="mountains"
           strength={450}
         >
-          <h1 style={{ textAlign: "center", marginTop: "20%" }}>
+          <h1 style={{ textAlign: "center", marginTop: "5%" }}>
             Hello, I'm <span>Kim</span>.
           </h1>
           <h2 style={{ textAlign: "center" }}>Web Developer</h2>
-          <h3 style={{ textAlign: "center", marginTop: "20%" }}>
+          <h3 style={{ textAlign: "center", marginTop: "5%" }}>
             <a href="#main-content">
               <BiDownArrow size={"2em"} />
             </a>
           </h3>
-          <div style={{ height: "0vh" }} />
+          <div style={{ height: "20vh" }} />
         </Parallax>
 
         <div id="main-content">
