@@ -39,10 +39,10 @@ const Home = () => {
               rounded
             ></Image>
             <Col className="center">
-              <div key={i}>
+              <div>
                 <p></p>
                 {content.map((contentItem) => (
-                  <div key={contentItem.id} className="mx-4">
+                  <div key={contentItem.uniqueKey} className="mx-4">
                     <p>{contentItem.welcome}</p>
                     <p></p>
                     <p>{contentItem.hobbies}</p>
