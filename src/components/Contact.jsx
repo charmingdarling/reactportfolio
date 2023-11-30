@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Button, Overlay } from "react-bootstrap";
+import { Button, FloatingLabel, Form } from "react-bootstrap";
 import { Link } from "react-router-dom"; // Importing a Link component; Link component is used to create links to different routes
+import VerticalModal from "./VerticalModal";
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -11,7 +12,7 @@ const Contact = () => {
   });
 
   const [displayMessage, setDisplayMessage] = useState("");
-  const [showOverlay, setShowOverlay] = useState(false);
+  // const [showOverlay, setShowOverlay] = useState(false);
 
   const sendEmail = () => {
     if (!formState.from_name || !formState.email || !formState.message) {
@@ -56,35 +57,57 @@ const Contact = () => {
   };
 
   return (
-    <div className="center">
-      <h1>Let's chat!</h1>
-      <div>
-        <input
-          type="text"
-          name="from_name"
-          placeholder="Your Name"
-          value={formState.from_name}
-          onChange={handleChange}
-        />
-        <p></p>
-        <input
-          type="text"
+    <>
+      {/* <VerticalModal show={showContact} onHide={closeModal} title="Contact" /> */}
+
+      <div
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+          width: "60%",
+        }}
+      >
+        <h1>Contact Me</h1>
+        <FloatingLabel
+          controlId="floatingInput"
+          label="Email address"
+          className="mb-3"
           name="email"
-          placeholder="Email"
           value={formState.email}
           onChange={handleChange}
-        />
-        <p></p>
-        <textarea
-          rows={4}
+        >
+          <Form.Control type="email" placeholder="your@email.com" />
+        </FloatingLabel>
+
+        <FloatingLabel
+          controlId="floatingInput"
+          label="Name"
+          className="mb-3"
+          name="from_name"
+          value={formState.from_name}
+          onChange={handleChange}
+        >
+          <Form.Control type="email" placeholder="Name" />
+        </FloatingLabel>
+
+        <FloatingLabel
+          controlId="floatingTextarea"
+          label="Message"
+          className="mb-3"
           name="message"
           value={formState.message}
           onChange={handleChange}
-        />
+        >
+          <Form.Control
+            as="textarea"
+            placeholder="Let me know what I can do for you."
+            style={{ height: "100px" }}
+          />
+        </FloatingLabel>
+        <Button onClick={sendEmail}>Submit</Button>
+        <p>{displayMessage}</p>
       </div>
-      <Button onClick={sendEmail}>Submit</Button>
-      <p>{displayMessage}</p>
-    </div>
+    </>
   );
 };
 
